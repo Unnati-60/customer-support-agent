@@ -1,4 +1,3 @@
-# mail-customer-support-agent
 # Customer Support Agent
 
 ---
