@@ -13,6 +13,7 @@
 ## About the project:
 
 An AI-powered customer support agent that understands customer emails, extracts intent, generates and executes SQL when required, and drafts a resolved response email. The system is built with a clean separation between UI, API, and agent logic, and is production-ready for containerized deployment.
+Evaluated agent against evaluation dataset and improved agent performance using SQL Reflection with execution output as external feedback.
 
 ---
 
@@ -20,12 +21,12 @@ An AI-powered customer support agent that understands customer emails, extracts 
 
 ```
 backend-api/                   # backend api (agent)
+    ├── tools/                 # Entrypoint scripts (run or evaluate agent)
     ├── data/                  # Data files (evaluation dataset)
     ├── src/                   # Main package directory
     │   ├── application/       # Application layer
     │   ├── infrastructure/    # Infrastructure layer
     │   └── config.py          # Configuration settings
-    ├── tools/                 # Entrypoint scripts (run or evaluate agent)
     ├── .env.example           # Environment variables template
     ├── .python-version        # Python version specification
     ├── Dockerfile             # API Docker image definition
